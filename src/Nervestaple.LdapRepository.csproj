@@ -4,7 +4,7 @@
     <TargetFramework>net5.0</TargetFramework>
     <PackageId>Nervestaple.LdapRepository</PackageId>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Version>0.3.0</Version>
+    <Version>0.3.1-rc</Version>
     <Company>Nervestaple Development</Company>
     <Product>Nervestaple.LdapRepository</Product>
     <Description>Provides a repository for LDAP account information</Description>
