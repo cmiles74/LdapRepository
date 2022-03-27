@@ -8,6 +8,7 @@
     <Company>Nervestaple Development</Company>
     <Product>Nervestaple.LdapRepository</Product>
     <Description>Provides a repository for LDAP account information</Description>
+    <RepositoryUrl>https://github.com/cmiles74/LdapRepository.git</RepositoryUrl>
     <LangVersion>8</LangVersion>
   </PropertyGroup>
 
