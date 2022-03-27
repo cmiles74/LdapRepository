@@ -12,6 +12,11 @@ server (like [OpenLDAP][1]).
 If you are using IdentityServer and would like to use LDAP as an identity
 provider, we also provide some glue code that will make that work.
 
+It's available on [NuGet.org][2], you may follow the directions on that page to
+add it to your project.
+
+* [Nervestaple.LDAPRepository NuGet Package][2]
+
 ## Configuration
 
 Doing so is easy! First you need to add the package, then add the relevant 
@@ -133,3 +138,4 @@ need to make any additional changes to your project. It should just work! `:-D`
 
 [0]: https://en.wikipedia.org/wiki/Active_Directory
 [1]: https://en.wikipedia.org/wiki/OpenLDAP
+[2]: https://www.nuget.org/packages/Nervestaple.LdapRepository/
