@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using Ductus.FluentDocker.Builders;
 using Ductus.FluentDocker.Services;
 using Microsoft.Extensions.Configuration;
@@ -34,6 +35,7 @@ namespace Nervestaple.LdapRepositoryTest {
                     b.AddDebug();
                     b.SetMinimumLevel(LogLevel.Trace);
                 });
+            
             IConfiguration configuration = new ConfigurationBuilder()
                 .AddJsonFile("appsettings.json")
                 .Build();
