@@ -1,0 +1,35 @@
+﻿name: Publish Pre-Release
+on:
+  push:
+    branches:
+      - 'main'
+
+env:
+  DOTNET_VERSION: '5.0.x'
+
+jobs:
+  build:
+    name: Publish Pre-release Package
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup .Net
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: ${{env.DOTNET_VERSION}}
+      - name: Restore Dependencies
+        run: dotnet restore
+      - name: Build
+        run: dotnet build --configuration Release --no-restore
+      - name: Test
+        run: dotnet test --no-restore --verbosity normal
+      - name: Pack for Publishing
+        run: dotnet pack --configuration Release
+      - name: Publish Pre-release Package
+        run: dotnet nuget push src/bin/Release/*-rc.nupkg --api-key ${{secrets.CI_PUBLISH_PKG_PAT}} --source https://nuget.pkg.github.com/cmiles74/index.json --skip-duplicate
+      - name: Delete Old Pre-release Packages
+        uses: actions/delete-package-versions@v3
+        with:
+          package-name: 'Nervestaple.LdapRepository'
+          min-versions-to-keep: 3
+          delete-only-pre-release-versions: "true"

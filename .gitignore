@@ -1,0 +1,57 @@
+*.swp
+*.*~
+project.lock.json
+.DS_Store
+*.pyc
+.jshintrc
+httpSysHosting.json
+*.db
+pack
+*.~undo-tree~
+
+# Visual Studio Code
+.vscode
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+build/
+bld/
+[Bb]in/
+[Oo]bj/
+msbuild.log
+msbuild.err
+msbuild.wrn
+deploy/
+
+# Visual Studio 2015
+.vs/
+
+# IntelliJ Rider
+.idea
+
+# Miscellaneous
+.Trash*
+working.*
+
+# npm built files
+src/client/node_modules
+src/client/src/**/*.css
+src/client/npm-debug.*
+src/client/package-lock.json
+src/wwwroot/*
+src/Logs
+
+# documentation
+src/doc/
+src/latex/
