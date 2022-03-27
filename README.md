@@ -1,3 +1,5 @@
+![Continuous Integration](https://github.com/cmiles74/LdapRepository/actions/workflows/ci.yml/badge.svg)
+
 # Nervestaple.LDAPRepository
 
 This library provides a repository for .Net Core applications that is backed by
